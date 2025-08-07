@@ -12,15 +12,35 @@ struct ContentView: View {
         NavigationStack {
             VStack{
                 Text("This is the root view 🌳")
-                NavigationLink(destination: Text("You've arrived at the second view🎉")) {
+                    .font(.title)
+         
+                NavigationLink(destination: Text("You've arrived at the second view🎉")
+                    .font(.largeTitle)
+                    .foregroundColor(Color.pink))
+                {
                     Text("Click Me")
+                        .font(.title)
+                        .foregroundColor(Color.red)
+          
+                  
+                NavigationLink(destination: Text("You've arrived at the third view🎉")
+                    .font(.largeTitle)
+                    .foregroundColor(Color.purple))
+                        {
+                            Text("Click Me for another view")
+                                .font(.title)
+                                .foregroundColor(Color.green)
+                            
+    
+                        
+                    }
                 }
             }
         }
     }
 }
+    
+    #Preview {
+        ContentView()
+    }
 
-
-#Preview {
-    ContentView()
-}
